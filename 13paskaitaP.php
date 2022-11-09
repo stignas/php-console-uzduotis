@@ -34,6 +34,9 @@ function create(): void
     echo 'Add new vehicle' . PHP_EOL;
     foreach ($dataArray[0] as $key => $value) {
         $input = readline("Vehicle $key: ");
+        if($key === 'weight') {
+            $input = intval($input);
+        }
         $newVehicle[$key] = $input;
     }
     $dataArray[] = $newVehicle;
