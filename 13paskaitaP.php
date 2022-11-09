@@ -22,7 +22,8 @@ function main(): void
         case 'x':
             exit();
         default:
-            echo 'No action chosen.';
+            echo 'No action chosen.' . PHP_EOL;
+            main();
     }
 }
 
